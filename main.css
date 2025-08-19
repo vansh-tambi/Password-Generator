@@ -1,0 +1,203 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"League Spartan", sans-serif;
+}
+#wrapper{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(230deg, rgba(2,0,36,1) 0%, rgba(131,16,175,1) 35%, rgba(115,0,255,1) 66%);
+}
+.container{
+    width: 90%;
+    max-width: 450px;
+}
+.heading{
+    color: antiquewhite;
+    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.2;
+}
+.displayContainer{
+    position: relative;
+    background-color: #4a1564;
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid #9400d3;
+    margin: 1rem 0;
+    padding-top: 0.35rem;
+}
+.displayContainer input{
+    background-color: transparent;
+    border: none;
+    color: yellow;
+    padding: 1.15rem 1.1rem;
+    font-weight: 600;
+    opacity: 0.75;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+    
+}
+.displayContainer input::placeholder{
+    position: absolute;
+    font-size: 1.5rem;
+    left: 1.5rem;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: yellow;
+    opacity: 0.65;
+}
+.displayContainer button{
+    position: absolute;
+    right: 1.5rem;
+    top: 25%;
+    background-color: transparent;
+    border: none;
+}
+.inputContainer{
+    background-color: #4a1564;
+    width: 100%;
+    border-bottom: 0.35rem solid #9400d3;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+#paslen{
+    color: antiquewhite;
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+.lengthContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+#lengthshown{
+    color: yellow;
+    font-size: 1.5rem;
+    font: bold;
+}
+.strengthContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.strengthContainer p{
+    color: whitesmoke;
+    font-size: 1.5rem;
+}
+.strengthContainer div{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    margin-bottom: 1.25rem;
+    margin-top: 1.25rem;
+}
+#generateBtn{
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #CF9FFF;
+    text-align: center;
+    border-radius: 0.75rem; 
+    border: none;
+    border-bottom: 0.35rem solid yellow;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: yellow;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+.check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+}
+.check input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid cyan;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.35rem;
+}
+.check input:checked{
+    background-color: cyan;
+}
+.check input:checked::before{
+    content: '✔';
+    position: absolute;
+    font-size: 1.05rem;
+    font-weight: 600;
+    left: 15%;
+    right: 25%;
+    bottom: 0.5px;
+}
+.slider{
+    appearance: none;
+    height: 0.75rem;
+    width: 100%;
+    cursor: pointer;
+    background-color: #570987;
+    border-radius: 1rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.5rem;
+    background-image: linear-gradient(#b53be9,#be3df5);
+    background-repeat: no-repeat;
+}
+.slider::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: yellow;
+    cursor: pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px  0px rgba(255, 229, 61, 0.5);
+    transition: all 100ms ease-in-out;
+}
+.slider:focus{
+    outline: 3px solid yellow;
+}
+.slider::-webkit-slider-thumb:hover{
+    outline: 2px solid yellow;
+    background-color: #570987;
+    box-shadow:  0px 0px 25px 5px rgba(224, 229 ,61 ,0.81);
+}
+
+.check label{
+    color: white;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.tooltip{
+    position: absolute;
+    background-color: #7e06e7;
+    color: rgb(237, 233, 5);
+    font-size: 1.25rem;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+    
+}
+.tooltip.active{
+    opacity: 1;
+    transform: scale(1);
+}
